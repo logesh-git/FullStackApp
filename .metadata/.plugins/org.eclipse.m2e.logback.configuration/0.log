@@ -1,0 +1,20 @@
+2020-02-24 17:14:17,970 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-02-24 17:16:59,244 [Worker-5: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.logesh.app:MyFirstFullStackApp:0.0.1-SNAPSHOT @ C:\Users\logesh.j\Desktop\Digital_Fullstack\MyFirstFullStackApp\pom.xml.
+2020-02-24 17:18:41,068 [Worker-5: Import Getting Started Content] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.pom
+2020-02-24 17:18:45,445 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MyFirstFullStackApp/src/main/java
+2020-02-24 17:18:45,446 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MyFirstFullStackApp/src/main/resources
+2020-02-24 17:18:45,457 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MyFirstFullStackApp/src/main/resources
+2020-02-24 17:18:45,474 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MyFirstFullStackApp/src/test/java
+2020-02-24 17:18:47,603 [Worker-5: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 111 sec
+2020-02-24 17:18:47,607 [Worker-5: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2020-02-24 17:18:49,192 [Worker-5: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.logesh.app:MyFirstFullStackApp:0.0.1-SNAPSHOT @ C:\Users\logesh.j\Desktop\Digital_Fullstack\MyFirstFullStackApp\pom.xml.
+2020-02-24 17:18:52,648 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MyFirstFullStackApp/src/main/java
+2020-02-24 17:18:52,649 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MyFirstFullStackApp/src/main/resources
+2020-02-24 17:18:52,650 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MyFirstFullStackApp/src/main/resources
+2020-02-24 17:18:52,653 [Worker-5: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MyFirstFullStackApp/src/test/java
+2020-02-24 17:18:54,071 [Worker-5: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 6 sec
+2020-02-24 17:18:58,651 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-24 17:18:58,672 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-02-24 17:18:58,715 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-02-24 17:18:58,719 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-02-24 17:18:58,719 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\logesh.j\Desktop\Digital_Fullstack\MyFirstFullStackApp\src\test\resources
