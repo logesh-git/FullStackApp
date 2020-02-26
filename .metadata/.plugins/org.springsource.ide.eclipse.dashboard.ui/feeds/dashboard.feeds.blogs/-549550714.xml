@@ -5,7 +5,7 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-02-24T06:49:00Z</updated>
+  <updated>2020-02-24T23:49:00Z</updated>
   <entry>
     <title>Netflix Built a Spring Application Generator to Boost Dev Productivity. Here's How You Can, Too.</title>
     <link rel="alternate" href="https://spring.io/blog/2020/02/24/netflix-built-a-spring-application-generator-to-boost-dev-productivity-here-s-how-you-can-too" />
@@ -14,7 +14,7 @@
       <name>Ben Wilcock</name>
     </author>
     <id>tag:spring.io,2019-10-22:3844</id>
-    <updated>2020-02-24T06:49:00Z</updated>
+    <updated>2020-02-24T23:49:00Z</updated>
     <content type="html">&lt;p&gt;If you watch &lt;a href="https://youtu.be/mln3_o6qlBo"&gt;Taylor Wicksell of Netflix&amp;rsquo;s SpringOne Platform keynote&lt;/a&gt; you can’t help but be blown away by the sheer productivity of their engineering team. Last year, over 300 Spring-based apps went into production – an incredible achievement. &lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.youtube.com/watch?v=mln3_o6qlBo"&gt;&lt;img src="http://img.youtube.com/vi/mln3_o6qlBo/maxresdefault.jpg" alt="Taylor Wicksell of Netflix&amp;rsquo;s SpringOne Platform Keynote" /&gt;&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-can-your-enterprise-learn-from-netflix" class="anchor" name="what-can-your-enterprise-learn-from-netflix"&gt;&lt;/a&gt;What Can Your Enterprise Learn From Netflix?&lt;/h2&gt;
 &lt;p&gt;At Netflix, &lt;a href="https://twitter.com/TaylorWicksell"&gt;Taylor&lt;/a&gt; and his Java Platform team own the Java developer experience (DevEx). Taylor’s team has one mission: to help Netflix&amp;rsquo;s engineers stay productive – delivering great code at great velocity. It’s a mission that is clearly proving successful.&lt;/p&gt;
@@ -22,7 +22,7 @@
 &lt;p&gt;Top of Taylor’s list of productivity secrets is &lt;em&gt;Application Generators&lt;/em&gt;. Netflix found that developers adopt platforms far quicker when everything they need to get started is right there, at their fingertips. Application generators help developers to get started quickly by providing useful guide rails that reduce toil and ease their burden. Application generators also encourage common approaches to common problems – particularly useful if you have lots of teams creating microservices at the same time.&lt;/p&gt;
 &lt;p&gt;Also high on Taylor&amp;rsquo;s list is &lt;em&gt;easing access to important libraries&lt;/em&gt;. Every enterprise has libraries - tools they rely on to simplify a task or take care of the plumbing. These libraries are quite important, often including proprietary business logic that’s both private and unique. Application generators can help developers to get easy access to these libraries without having to delve into docs, wade through wiki’s, or search in maven repositories.&lt;/p&gt;&lt;h2&gt;&lt;a href="#are-application-generators-useful" class="anchor" name="are-application-generators-useful"&gt;&lt;/a&gt;Are Application Generators Useful?&lt;/h2&gt;
 &lt;p&gt;Yes. You probably use an application generator already. The best example I can think of is &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;, also known as the “Spring Initializr” (although others exist, such as &lt;a href="https://start.steeltoe.io/"&gt;this one for .Net applications&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;Spring Initializr makes generating Spring Boot apps a cinch. The secret to its success is no secret at all: it’s superbly easy to use. You can use it &lt;a href="https://start.spring.io"&gt;in your browser&lt;/a&gt;, or directly from inside your IDE. You can even use it from the command line via cURL or &lt;a href="https://httpie.org/"&gt;HTTPie&lt;/a&gt; or directly from the &lt;a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#cli"&gt;Spring Boot CLI&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#build-your-own-application-generator" class="anchor" name="build-your-own-application-generator"&gt;&lt;/a&gt;Build Your Own Application Generator&lt;/h2&gt;
+&lt;p&gt;Spring Initializr makes generating Spring Boot apps a cinch. The secret to its success is no secret at all: it’s superbly easy to use. You can use it &lt;a href="https://start.spring.io"&gt;in your browser&lt;/a&gt;, or directly from inside your IDE. You can even use it from the command line via cURL or &lt;a href="https://httpie.org/"&gt;HTTPie&lt;/a&gt; or from the &lt;a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#cli"&gt;Spring Boot CLI&lt;/a&gt; tool.&lt;/p&gt;&lt;h2&gt;&lt;a href="#build-your-own-application-generator" class="anchor" name="build-your-own-application-generator"&gt;&lt;/a&gt;Build Your Own Application Generator&lt;/h2&gt;
 &lt;p&gt;How? With Spring of course! There’s even a library for it. The library is also called &lt;a href="https://github.com/spring-io/initializr"&gt;Spring Initializr&lt;/a&gt;. It’s the core library that powers &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt; and it&amp;rsquo;s super easy to customize. In the rest of this article, we’ll walk through the steps required to create your own customized initializr. &lt;/p&gt;
 &lt;p&gt;To simulate what you would do inside your enterprise, in this tutorial we’ll narrow some of the application generation options and include some third-party libraries that the regular Spring Initializr doesn’t offer, namely the &lt;a href="https://axoniq.io/"&gt;Axon CQRS and Event Sourcing Framework&lt;/a&gt;. We’ll call our project the “Axon Initializr”.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -184,6 +184,141 @@
 &lt;p&gt;As you’ve seen, creating a custom application generator using the Spring Initializr as a base is really easy, and it greatly improves our developer experience. By adding your preferred libraries and other customizations, you make it easy for developers to “do the right thing” and give them something that everybody wants - more time to work on the things that really matter!&lt;/p&gt;
 &lt;p&gt;I’ve only scratched the surface of what’s possible with &lt;a href="https://github.com/spring-io/initializr"&gt;Spring Initializr&lt;/a&gt; customization. To find out more about the many other customization options, take a look at the &lt;a href="https://docs.spring.io/initializr/docs/0.8.0.RELEASE/reference/html/"&gt;official documentation&lt;/a&gt;. And finally, don’t forget that the code that accompanies this tutorial can be found &lt;a href="https://github.com/benwilcock/axon-initializr"&gt;here on GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;This article originally appeared on pivotal.io&lt;/em&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.3.0.M2 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/02/24/spring-boot-for-apache-geode-pivotal-gemfire-1-3-0-m2-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2020-02-24:3968</id>
+    <updated>2020-02-24T21:12:46Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring, Apache Geode &amp;amp; Pivotal GemFire communities, it is my pleasure to announce the release of &lt;em&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire&lt;/em&gt; (SBDG) &lt;code&gt;1.3.0.M2&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;code&gt;1.3.0.M2&lt;/code&gt; release aligns with:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.2.3.RELEASE&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Boot &lt;code&gt;2.3.0.M2&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Data for Apache Geode &amp;amp; Pivotal GemFire (SDG) &lt;code&gt;2.3.0.M3&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Data &lt;code&gt;Neumann-M3&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Session for Apache Geode &amp;amp; Pivotal GemFire (SSDG) &lt;code&gt;2.3.0.M2&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Session &lt;code&gt;Dragonfruit-M2&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Test for Apache Geode &amp;amp; Pivotal GemFire (STDG) &lt;code&gt;0.0.13.RELEASE&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/blob/1.3.0.M2/spring-geode/src/main/resources/changelog.txt#L7-L29"&gt;changelog&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This release is available in the &lt;a href="https://repo.spring.io/milestone/org/springframework/geode/spring-geode-starter/1.3.0.M2/"&gt;Spring  Milestone Repository&lt;/a&gt; as well as &lt;a href="https://start.spring.io/#!platformVersion=2.3.0.M2&amp;amp;dependencies=geode"&gt;available&lt;/a&gt; on &lt;em&gt;Spring Initializer&lt;/em&gt; at &lt;a href="https://start.spring.io"&gt;start.spring.io&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="whats-new"&gt;&lt;a class="anchor" href="#whats-new"&gt;&lt;/a&gt;What&amp;#8217;s New&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;SBDG &lt;code&gt;1.3.0.M2&lt;/code&gt; adds new starters to enable logging in either Apache Geode (&lt;code&gt;org.springframework.geode:spring-geode-starter-logging:1.3.0.M2&lt;/code&gt;) or Pivotal GemFire (&lt;code&gt;org.springframework.geode:spring-gemfire-starter-logging:1.3.0.M2&lt;/code&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Out-of-the-box, SBDG imports the &lt;code&gt;org.springframework.boot:spring-boot-starter-logging&lt;/code&gt; dependency and uses Logback as the default logging system provider.  It also automatically bridges the Log4j API, used by Apache Geode/Pivotal GemFire to log statements in GemFire/Geode components, to SLF4J. Finally, a default, configurable &lt;code&gt;logback.xml&lt;/code&gt; file is provided by SBDG to output Apache Geode or Pivotal GemFire log statements at &lt;code&gt;INFO&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;You can read the &lt;a href="https://docs.spring.io/spring-boot-data-geode-build/1.3.x/reference/html5/#geode-logging"&gt;reference documentation&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="whats-next"&gt;&lt;a class="anchor" href="#whats-next"&gt;&lt;/a&gt;What&amp;#8217;s Next&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We have plans to provide an option to preheat the GemFire/Geode oven.  In a nutshell, we mean to preload data into a configured GemFire/Geode Region on startup in much the same way as a &lt;code&gt;data.sql&lt;/code&gt; file can be provided and picked up by &lt;em&gt;Spring Boot&lt;/em&gt; to automatically preload an existing RDBMS table or tables.  See &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues/67"&gt;Issue #67&lt;/a&gt; for more details and follow our progress.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Also, in addition to adding to the &lt;a href="https://docs.spring.io/spring-boot-data-geode-build/1.3.x/reference/html5/#geode-samples"&gt;Samples&lt;/a&gt;, we plan to make each sample individually buildable and runnable without having to build the entire SBDG project.
+See &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues/75"&gt;Issue #75&lt;/a&gt; for more details and follow our progress.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="feedback"&gt;&lt;a class="anchor" href="#feedback"&gt;&lt;/a&gt;Feedback&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As always, any feedback is greatly appreciated and welcomed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues"&gt;Issue&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/pulls"&gt;PR&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Session for Apache Geode &amp; Pivotal GemFire 2.3.0.M2 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/02/24/spring-session-for-apache-geode-pivotal-gemfire-2-3-0-m2-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2020-02-24:3967</id>
+    <updated>2020-02-24T20:42:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the Spring, Apache Geode and Pivotal GemFire communities, it is my pleasure to announce the release of &lt;em&gt;Spring Session for Apache Geode &amp;amp; Pivotal GemFire&lt;/em&gt; (SSDG) &lt;code&gt;2.3.0.M2&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;code&gt;2.3.0.M2&lt;/code&gt; release aligns with:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Framework &lt;code&gt;5.2.3.RELEASE&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Data &lt;code&gt;Neumann-M3&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Session &lt;code&gt;Dragonfruit-M2&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Session core &lt;code&gt;2.3.0.M1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;See the &lt;a href="https://github.com/spring-projects/spring-session-data-geode/blob/2.3.0.M2/spring-session-data-geode/src/main/resources/changelog.txt#L7-L18"&gt;changelog&lt;/a&gt; for additional details.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The release is available in the &lt;a href="https://repo.spring.io/milestone/org/springframework/session/spring-session-data-geode/2.3.0.M2/"&gt;Spring Milestone Repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="feedback"&gt;&lt;a class="anchor" href="#feedback"&gt;&lt;/a&gt;Feedback&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As always, any feedback is greatly appreciated and welcomed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-session-data-geode/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session-data-geode/pulls"&gt;PR&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-session"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
   <entry>
@@ -983,65 +1118,6 @@ Spring Security 5.3.0.RC1! You can find the complete details in the &lt;a href="
 &lt;/div&gt;
 &lt;div class="paragraph"&gt;
 &lt;p&gt;&lt;a href="https://projects.spring.io/spring-session/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-session/docs/2.2.0.M2/reference/html5/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-session/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-session"&gt;Gitter&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-session"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow 2.4.0 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/02/04/spring-cloud-data-flow-2-4-0-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Janne Valkealahti</name>
-    </author>
-    <id>tag:spring.io,2020-02-04:3949</id>
-    <updated>2020-02-04T07:20:07Z</updated>
-    <content type="html">&lt;p&gt;The release 2.4.0 mainly focused on the UI updates and selected enhacements. Our post for &lt;a href="https://spring.io/blog/2020/01/27/spring-cloud-data-flow-2-4-0-m1-released"&gt;2.4.0.M1&lt;/a&gt; contains more info about the changes.&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.1.5.RELEASE, 1.2.4.RELEASE and 1.3.0.M1 are available</title>
-    <link rel="alternate" href="https://spring.io/blog/2020/02/01/spring-boot-for-apache-geode-pivotal-gemfire-1-1-5-release-1-2-4-release-and-1-3-0-m1-are-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>John Blum</name>
-    </author>
-    <id>tag:spring.io,2020-02-01:3948</id>
-    <updated>2020-02-01T04:49:33Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the &lt;em&gt;Spring&lt;/em&gt;, &lt;em&gt;Apache Geode&lt;/em&gt; and &lt;em&gt;Pivotal GemFire&lt;/em&gt; communities, it is my pleasure to announce the release of &lt;em&gt;Spring Boot for Apache Geode and Pivotal GemFire&lt;/em&gt; (SBDG) &lt;code&gt;1.1.5.RELEASE&lt;/code&gt;, &lt;code&gt;1.2.4.RELEASE&lt;/code&gt; and &lt;code&gt;1.3.0.M1&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;In addition to support for &lt;a href="https://geode.apache.org/"&gt;Apache Geode&lt;/a&gt; and &lt;a href="https://pivotal.io/pivotal-gemfire"&gt;Pivotal GemFire&lt;/a&gt;, SBDG has dedicated support for, and works seamlessly with, &lt;a href="https://pivotal.io/pivotal-cloud-cache"&gt;Pivotal Cloud Cache&lt;/a&gt; as well.  See &lt;a href="https://docs.spring.io/spring-boot-data-geode-build/1.2.x/reference/html5/#cloudfoundry"&gt;here&lt;/a&gt; for more details.  The importance of this &lt;a href="https://docs.spring.io/spring-boot-data-geode-build/1.2.x/reference/html5/#geode-gemfire-switch"&gt;project goal&lt;/a&gt; cannot be overstated.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;SBDG &lt;code&gt;1.1.5.RELEASE&lt;/code&gt; builds on the latest Spring Boot 2.1.12.RELEASE and is based on Spring Framework 5.1.13.RELEASE, Spring Data Lovelace-SR15 (SDG), Spring Session for Apache Geode &amp;amp; Pivotal GemFire (SSDG) 2.1.8.RELEASE, Spring Test for Apache Geode &amp;amp; Pivotal GemFire (STDG) 0.0.8.RELEASE along with Apache Geode 1.6.0 and Pivotal GemFire 9.5.4.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;SBDG &lt;code&gt;1.2.4.RELEASE&lt;/code&gt; builds on the latest Spring Boot 2.2.4.RELEASE and is based on Spring Framework 5.2.3.RELEASE, Spring Data Moore-SR4 (SDG), Spring Session for Apache Geode &amp;amp; Pivotal GemFire (SSDG) 2.2.2.RELEASE, Spring Test for Apache Geode &amp;amp; Pivotal GemFire (STDG) 0.0.12.RELEASE along with Apache Geode 1.9.2 and Pivotal GemFire 9.8.4.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;SBDG &lt;code&gt;1.3.0.M1&lt;/code&gt; builds on the latest Spring Boot 2.3.0.M1 and is based on Spring Framework 5.2.3.RELEASE, Spring Data Neumann-M2 (SDG), Spring Session for Apache Geode &amp;amp; Pivotal GemFire (SSDG) 2.3.0.M1, Spring Test for Apache Geode &amp;amp; Pivotal GemFire (STDG) 0.0.12.RELEASE along with Apache Geode 1.11.0 and Pivotal GemFire 9.9.1.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;See the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/blob/1.3.0.M1/spring-geode/src/main/resources/changelog.txt#L7-L58"&gt;changelog&lt;/a&gt; for more details.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Both SBDG &lt;code&gt;1.1.5.RELEASE&lt;/code&gt; and &lt;code&gt;1.2.4.RELEASE&lt;/code&gt; can be acquired from &lt;a href="https://search.maven.org/artifact/org.springframework.geode/spring-geode-starter"&gt;Maven Central&lt;/a&gt;.  SBDG &lt;code&gt;1.3.0.M1&lt;/code&gt; can be acquired from the Spring &lt;a href="https://repo.spring.io/libs-milestone/org/springframework/geode/spring-geode-starter/1.3.0.M1/"&gt;libs-milestone&lt;/a&gt; Repository.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Technically, the easiest way to get started building Spring (Boot) for Apache Geode, Pivotal GemFire or Pivotal Cloud Cache applications is by going to &lt;a href="https://start.spring.io/"&gt;start.spring.io&lt;/a&gt;.  Once there, you can select Spring for "&lt;strong&gt;&lt;em&gt;Apache Geode&lt;/em&gt;&lt;/strong&gt;" as a dependency in your application Maven POM or Gradle build file, like &lt;a href="https://start.spring.io/#!platformVersion=2.2.4.RELEASE&amp;amp;dependencies=geode"&gt;this&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="feedback"&gt;&lt;a class="anchor" href="#feedback"&gt;&lt;/a&gt;Feedback&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;As always any feedback is welcomed and appreciated.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/pulls"&gt;PR&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
